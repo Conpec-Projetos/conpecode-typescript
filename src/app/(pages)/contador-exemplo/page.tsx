@@ -1,8 +1,12 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Contador() {
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log("Contador atualizado:", count);
+  }, [count]);
 
   return (
     <main className="h-screen w-screen flex flex-col items-center justify-center gap-4 bg-gradient-to-b from-conpec-orange-faded to-conpec-orange-strong select-none">
