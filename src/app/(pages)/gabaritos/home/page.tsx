@@ -32,20 +32,20 @@ export default function Home() {
           activityDescription="Liste todos os usuários e adicione um botão para mostrar apenas os ativos"
         />
         <Card
-          activityName="Home"
-          dificulty="MEDIUM"
-          setCounter={setActivitiesDone}
-          activityLink="/praticas/home"
-          activityTemplateLink="/gabaritos/home"
-          activityDescription="Usando componentes, mostre na tela quantas atividades você completou"
-        />
-        <Card
           activityName="API"
           dificulty="MEDIUM"
           setCounter={setActivitiesDone}
           activityLink="/praticas/api"
           activityTemplateLink="/gabaritos/api"
           activityDescription="Puxe os dados de uma API com useEffect e customize a cor da página"
+        />
+        <Card
+          activityName="Home"
+          dificulty="MEDIUM"
+          setCounter={setActivitiesDone}
+          activityLink="/praticas/home"
+          activityTemplateLink="/gabaritos/home"
+          activityDescription="Usando componentes, mostre na tela quantas atividades você completou"
         />
         <Card
           activityName="To-do List"
