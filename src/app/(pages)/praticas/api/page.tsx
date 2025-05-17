@@ -12,7 +12,6 @@ interface PokemonData {
 
 export default function PokemonApi() {
   const [data, setData] = useState<PokemonData | null>(null);
-  const [bgColor, setBgColor] = useState("bg-blue-500");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,36 +26,22 @@ export default function PokemonApi() {
 
   return (
     <>
-      {data ? (
-        <div className={`flex flex-col items-center justify-center w-full h-screen ${bgColor}`}>
+        <div className={`flex flex-col items-center justify-center w-full h-screen`}>
           <h1 className="text-2xl font-bold">Pokemon API</h1>
-            <PokemonCard
-              name={data.name}
-              height={data.height}
-              weight={data.weight}
-              sprites={data.sprites}
-          />
+            &quot;Colocar aqui o PokemonCard&quot;
           <button
-            className={`px-4 py-2 mt-4 text-white rounded ${bgColor === "bg-blue-500" ? "bg-green-500" : "bg-blue-500"}`}
-            onClick={() => {
-              setBgColor(bgColor === "bg-blue-500" ? "bg-green-500" : "bg-blue-500");
-            }}
+            className={`px-4 py-2 mt-4 text-black border-conpec-orange border-1 rounded cursor-pointer `}
           >
-            {bgColor === "bg-blue-500" ? "Mudar para Verde" : "Mudar para Azul"}
+            Mudar para ???
           </button>
         </div>
-      ) : (
-        <div className="flex items-center justify-center w-full h-screen">
-          <h1 className="text-2xl font-bold">Carregando...</h1>
-        </div>
-      )}
     </>
   );
 }
 
 const PokemonCard = ({ name, height, weight, sprites }: PokemonData) => {
   return (
-    <div className="mt-4 p-4 border rounded">
+    <div className="mt-4 p-4 border rounded transition-transform hover:scale-105">
       <h2 className="text-xl font-semibold">Dados do Pokemon</h2>
       <p>
         <strong>Nome:</strong> {name}

@@ -1,5 +1,6 @@
 import { Checkbox } from "../ui/checkbox";
 import { ExternalLink } from "lucide-react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 interface CardProps {
@@ -30,7 +31,7 @@ export default function Card({
           <p>Faça Aqui</p>
           <ExternalLink
             className="text-conpec-blue cursor-pointer hover:text-conpec-orange-strong transition-colors"
-            onClick={() => router.push(activityLink)}
+            onClick={() => router.replace(activityLink)}
           />
         </div>
       </header>
@@ -40,12 +41,12 @@ export default function Card({
           {activityDescription}
         </p>
 
-        <a
+        <Link
           className="text-md font-normal text-conpec-blue hover:text-conpec-orange-strong transition-colors"
           href={activityTemplateLink}
         >
           Link para o gabarito
-        </a>
+        </Link>
         <div className="flex items-center gap-2">
           <Checkbox
             id="checkbox"
